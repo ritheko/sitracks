@@ -101,6 +101,22 @@
   >
     <i class="fas fa-microphone"></i>
   </button> -->
+  
+  <button
+    type="button"
+    title="Zoom in"
+    class="btn-zoom-in btn btn-outline-dark"
+  >
+    <i class="fas fa-search-plus"></i>
+  </button>
+  <button
+    type="button"
+    title="Zoom out"
+    class="btn-zoom-out btn btn-outline-dark"
+  >
+    <i class="fas fa-search-minus"></i>
+  </button>
+
 </div>
 
   </div>
@@ -166,6 +182,32 @@
 <script type="text/javascript" src="js/stem-tracks.js"></script>
 <script type="text/javascript" src="js/emitter.js"></script>
 
+<!-- Add this script to handle external URLs -->
+<!-- <script>
+document.addEventListener('DOMContentLoaded', function() {
+  var playlist = WaveformPlaylist.init({
+    samplesPerPixel: 3000,
+    waveHeight: 100,
+    container: document.getElementById("playlist"),
+    timescale: true,
+    state: 'cursor',
+    colors: {
+      waveOutlineColor: '#E0EFF1'
+    },
+    controls: {
+      show: true,
+      width: 200
+    },
+    zoomLevels: [500, 1000, 3000, 5000],
+    // Add CORS settings
+    webAudioOptions: {
+      audioContext: new (window.AudioContext || window.webkitAudioContext)(),
+      crossOrigin: 'anonymous'  // Enable CORS
+    }
+  });
+
+});
+</script> -->
 
   </body>
 </html>
