@@ -32,6 +32,10 @@ playlist
       src: "media/audio/BassDrums30.mp3",
       name: "Drums",
     },
+    {
+      src: "https://drive.google.com/file/d/1z7vUMNeXtKCsQXbLW2e8T_R0QvQ8AeVG/view?usp=sharing",
+      name: "Bass",
+    },
   ])
   .then(function () {
     //can do stuff with the playlist.
