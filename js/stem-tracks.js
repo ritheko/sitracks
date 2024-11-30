@@ -11,30 +11,68 @@ var playlist = WaveformPlaylist.init({
     show: true, //whether or not to include the track controls
     width: 200, //width of controls in pixels
   },
-  zoomLevels: [500, 1000, 3000, 5000],
+  zoomLevels: [500, 1000, 3000, 5000, 10000],
+  webAudioOptions: {
+    audioContext: new (window.AudioContext || window.webkitAudioContext)(),
+    crossOrigin: 'anonymous'
+  }
 });
 
 playlist
   .load([
     {
-      src: "media/audio/Vocals30.mp3",
-      name: "Vocals",
+      src: "https://www.inkid.org/Click.mp3",
+      name: "Metronome",
+      waveOutlineColor: '#E0EFF1',
     },
     {
-      src: "media/audio/Guitar30.mp3",
-      name: "Guitar",
+      src: "https://www.inkid.org/All.mp3",
+      name: "All",
+      waveOutlineColor: '#E0EEF1',
     },
     {
-      src: "media/audio/PianoSynth30.mp3",
-      name: "Pianos & Synth",
+      src: "https://www.inkid.org/Bass.mp3",
+      name: "Bass",
     },
     {
-      src: "media/audio/BassDrums30.mp3",
+      src: "https://www.inkid.org/Cello.mp3",
+      name: "Cello",
+    },
+    {
+      src: "https://www.inkid.org/Drums.mp3",
       name: "Drums",
     },
     {
-      src: "https://drive.google.com/file/d/1z7vUMNeXtKCsQXbLW2e8T_R0QvQ8AeVG/view?usp=sharing",
-      name: "Bass",
+      src: "http://www.inkid.org/EG%20DJ.mp3",
+      name: "EG DJ",
+    },
+    {
+      src: "https://www.inkid.org/EG-T.mp3",
+      name: "EG T",
+    },
+    {
+      src: "https://www.inkid.org/Keys.mp3",
+      name: "Keys",
+    },
+    {
+      src: "https://www.inkid.org/Piano.mp3",
+      name: "Piano",
+    },
+    {
+      src: "https://www.inkid.org/Synth Bass.mp3",
+      name: "Synth Bass",
+    },
+    {
+      src: "http://www.inkid.org/Trumpet%201.mp3",
+      name: "Trumpet 1",
+    },
+    {
+      src: "http://www.inkid.org/Trumpet%202.mp3",
+      name: "Trumpet 2",
+    },
+    {
+      src: "http://www.inkid.org/Violin.mp3",
+      name: "Violin",
     },
   ])
   .then(function () {
